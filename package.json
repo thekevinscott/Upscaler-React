@@ -1,0 +1,44 @@
+{
+  "name": "upscaler-react",
+  "version": "0.1.0",
+  "description": "A React component for upscaling images with Upscaler.JS",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "build": "rimraf dist && tsc --skipLibCheck",
+    "watch": "rimraf dist && tsc --watch --skipLibCheck",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "keywords": [
+    "super resolution",
+    "react",
+    "image upscaling",
+    "image enhancement",
+    "tensorflow.js",
+    "upscaler.js"
+  ],
+  "author": "Kevin Scott",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.1.0",
+    "@types/react": "^16.9.44",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.7",
+    "upscaler": "^0.5.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.8",
+    "jest": "^26.2.2",
+    "rimraf": "^3.0.2"
+  }
+}
